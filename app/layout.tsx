@@ -4,7 +4,8 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter"
+  variable: "--font-inter", // optional (if using CSS variable)
+  display: "swap" // recommended to avoid FOUT
 });
 
 const libreBaskerville = Libre_Baskerville({
