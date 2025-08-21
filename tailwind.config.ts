@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        spinSlow: "spin 5s linear infinite",
+        spinFast: "spin 1s linear infinite"
+      },
       colors: {
         primary: "#12291E",
         accent: "#E59B73"

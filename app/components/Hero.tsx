@@ -25,14 +25,28 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Right Graphic */}
-      <div className="flex justify-center lg:justify-end">
+      <div className="flex justify-center lg:justify-end relative hero_section">
         <Image
           src="/images/hero_img.png"
           alt="protocol graphic"
           width={574}
           height={544}
-          className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[574px]"
+          className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[571px]"
         />
+        {/* <Image
+          src="/images/hero2.png"
+          alt="protocol graphic"
+          width={178}
+          height={133}
+          className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[178px] absolute top-[calc(50%-66px)] left-[calc(50%-88px)] round_animate"
+        />
+        <Image
+          src="/images/hero3.png"
+          alt="protocol graphic"
+          width={374}
+          height={259}
+          className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[374px] absolute -bottom-20 -right-24 round_animate"
+        /> */}
       </div>
     </section>
   );
