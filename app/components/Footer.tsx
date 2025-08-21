@@ -74,13 +74,13 @@ const Footer = () => {
             <a href="#" className="hover:text-white text-xl font-normal">
               CONTACT
             </a>
-            <a href="#" className="hover:text-white text-xl font-normal">
+            <a href="aboutUs" className="hover:text-white text-xl font-normal">
               ABOUT
             </a>
             <a href="#" className="hover:text-white text-xl font-normal">
               DOCS
             </a>
-            <a href="#" className="hover:text-whit text-xl font-normale">
+            <a href="/privacy" className="hover:text-whit text-xl font-normale">
               PRIVACY
             </a>
             <a href="#" className="hover:text-white text-xl font-normal">

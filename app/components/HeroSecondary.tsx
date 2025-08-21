@@ -33,7 +33,7 @@ const HeroSecondary = (props: IProps) => {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center text-center px-4">
-          <h1 className="text-3xl md:text-4xl text-white mb-4 font_title font-bold text-[52px]">
+          <h1 className="text-3xl md:text-4xl text-white mb-[30px] font_title font-bold lg:text-[52px]">
             {title}
           </h1>
 

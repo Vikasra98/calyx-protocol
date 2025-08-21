@@ -6,46 +6,50 @@ import React from "react";
 
 const FoundingStory = () => {
   return (
-    <section className="bg-gradient-to-r from-[#184D3D] to-[#0B2B22] text-white px-6 lg:px-20 py-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section className="bg-gradient-to-r from-[#184D3D] to-[#0B2B22] text-white px-6 lg:px-36 py-16 lg:mt-[72px] lg:pb-32">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
         {/* Left side - Images */}
-        <div className="flex items-center space-y-6">
+        <div className="flex items-center gap-6">
           {/* First Image */}
-          <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-lg -mt-[72px]">
+          <div className="relative max-w-sm -mt-[250px] w-[275px] after:w-[268px] after:h-2 after:rounded-[10px] after:absolute after:bg-[#D99A70] after:-bottom-5 after:left-[calc(50%-134px)]">
             <Image
               src="/images/story1.jpg" // replace with your actual image
               alt="Founder"
               width={275}
               height={610}
-              className="object-cover w-[275px] h-[610px]"
+              className="object-cover w-[275px] h-[610px] rounded-2xl overflow-hidden shadow-lg"
             />
           </div>
 
           {/* Second Image */}
-          <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-[275px] max-w-sm">
             <Image
               src="/images/story2.jpg" // replace with your actual image
               alt="Sustainability Principles"
               width={275}
               height={610}
-              className="object-cover w-[275px] h-[610px]"
+              className="object-cover w-[275px] h-[610px] rounded-2xl overflow-hidden shadow-lg"
             />
           </div>
         </div>
 
         {/* Right side - Text */}
         <div>
-          <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+          <h2 className="text-2xl lg:text-[44px] font-bold mb-10 lg:mb-[26px] font_title">
             Founding Story &amp; Principles
           </h2>
-          <p className="mb-6 text-base leading-relaxed text-gray-100">
+          <p className="mb-6 text-base font-normal leading-6 text-gray-100">
             Calyx was founded by a team of sustainability advocates, blockchain
             engineers, and data scientists who saw a recurring problem: ESG
             scores were often inconsistent, unverifiable, and disconnected from
             real impact. We set out to build a protocol where trust is built
-            into the system itself.
+            into the system itself. Calyx was founded by a team of
+            sustainability advocates, blockchain engineers, and data scientists
+            who saw a recurring problem: ESG scores were often inconsistent,
+            unverifiable, and disconnected from real impact. We set out to build
+            a protocol where trust is built into the system itself.
           </p>
-          <p className="text-base leading-relaxed text-gray-100">
+          <p className="text-base font-normal leading-6 text-gray-100">
             Calyx was founded by a team of sustainability advocates, blockchain
             engineers, and data scientists who saw a recurring problem: ESG
             scores were often inconsistent, unverifiable, and disconnected from
