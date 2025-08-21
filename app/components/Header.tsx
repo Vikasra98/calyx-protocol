@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,12 +38,12 @@ const Header: React.FC = () => {
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-8">
         <nav className="flex gap-8 text-white">
-          <a href="#" className="hover:text-gray-300 text-xl">
+          <Link href="/" className="hover:text-gray-300 text-xl">
             Home
-          </a>
-          <a href="#" className="hover:text-gray-300 text-xl">
+          </Link>
+          <Link href="/aboutUs" className="hover:text-gray-300 text-xl">
             About
-          </a>
+          </Link>
           <a href="#" className="hover:text-gray-300 text-xl">
             GitHub
           </a>
