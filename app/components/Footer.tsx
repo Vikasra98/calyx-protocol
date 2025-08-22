@@ -74,7 +74,7 @@ const Footer = () => {
             <a href="#" className="hover:text-white text-xl font-normal">
               CONTACT
             </a>
-            <a href="aboutUs" className="hover:text-white text-xl font-normal">
+            <a href="/aboutUs" className="hover:text-white text-xl font-normal">
               ABOUT
             </a>
             <a href="#" className="hover:text-white text-xl font-normal">
@@ -83,7 +83,10 @@ const Footer = () => {
             <a href="/privacy" className="hover:text-whit text-xl font-normale">
               PRIVACY
             </a>
-            <a href="#" className="hover:text-white text-xl font-normal">
+            <a
+              href="/termsOfUse"
+              className="hover:text-white text-xl font-normal"
+            >
               TERMS
             </a>
           </div>
