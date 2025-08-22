@@ -76,10 +76,13 @@ const Header: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full bg-[#0B2B22] flex flex-col items-center gap-6 py-6 shadow-lg md:hidden z-50"
           >
-            <a href="#" className="hover:text-gray-300 text-lg text-white">
+            <a href="/" className="hover:text-gray-300 text-lg text-white">
               Home
             </a>
-            <a href="#" className="hover:text-gray-300 text-lg text-white">
+            <a
+              href="/aboutUs"
+              className="hover:text-gray-300 text-lg text-white"
+            >
               About
             </a>
             <a href="#" className="hover:text-gray-300 text-lg text-white">
