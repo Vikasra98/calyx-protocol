@@ -28,7 +28,7 @@ const Header: React.FC = () => {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image
-          src="/images/logo.png"
+          src="/Logo/logo_White.png"
           alt="calyx logo"
           width={187}
           height={59}

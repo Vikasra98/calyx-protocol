@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       {/* Right Graphic */}
       <div className="flex justify-center lg:justify-end relative hero_section">
         <Image
-          src="/images/hero_img.png"
+          src="/images/hero_gif.gif"
           alt="protocol graphic"
           width={574}
           height={544}
