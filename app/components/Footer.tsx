@@ -71,7 +71,10 @@ const Footer = () => {
             </button>
           </form>
           <div className="flex gap-6 text-sm flex-wrap">
-            <a href="#" className="hover:text-white text-xl font-normal">
+            <a
+              href="/contactUs"
+              className="hover:text-white text-xl font-normal"
+            >
               CONTACT
             </a>
             <a href="/aboutUs" className="hover:text-white text-xl font-normal">

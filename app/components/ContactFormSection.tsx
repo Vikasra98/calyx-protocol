@@ -1,12 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { MapContainer, TileLayer } from "react-leaflet";
 import React from "react";
-import { LatLngExpression } from "leaflet";
 
 const ContactFormSection = () => {
-  const center: LatLngExpression = [40.7128, -74.006]; // New York
   return (
     <>
       <section className="w-full bg-white lg:py-[100px] py-12 px-6 lg:px-36">
@@ -112,18 +109,6 @@ const ContactFormSection = () => {
           </div>
         </div>
       </section>
-      <div className="w-full h-[500px]">
-        <MapContainer
-          center={center}
-          zoom={10}
-          className="w-full h-full rounded-lg shadow-md"
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
-          />
-        </MapContainer>
-      </div>
     </>
   );
 };
