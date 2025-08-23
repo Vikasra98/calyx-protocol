@@ -28,7 +28,7 @@ const HeaderSecondary = () => {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image
-          src="/images/logo-dark.png"
+          src="/Logo/fullcolor_horizontal_calyx_logo.png"
           alt="calyx logo"
           width={187}
           height={59}

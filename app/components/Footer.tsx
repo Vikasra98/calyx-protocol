@@ -11,7 +11,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2 mb-[18px]">
             <Image
-              src="/images/logo.png"
+              src="/Logo/logo_White.png"
               alt="calyx logo"
               width={180}
               height={57}

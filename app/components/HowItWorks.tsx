@@ -10,8 +10,8 @@ const HowItWorks = () => {
       title: "The Calyx Arc™",
       description:
         "A sigmoid scoring curve that rewards long-term, sustained impact over short-term optics.",
-      brownIcon: "/images/how_works1.png", // default PNG
-      whiteIcon: "/images/how_works1-hover.png" // hover PNG
+      brownIcon: "/Icon/The_Calyx_Arc.png", // default PNG
+      whiteIcon: "/Icon/The_Calyx_Arc_white.png", // hover PNG
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const HowItWorks = () => {
       description:
         "Scores grow exponentially when verified actions align — across time, teams, or geographies.",
       brownIcon: "/images/how_works2.png",
-      whiteIcon: "/images/how_works2-hover.png"
+      whiteIcon: "/images/how_works2-hover.png",
     },
     {
       id: 3,
@@ -27,8 +27,8 @@ const HowItWorks = () => {
       description:
         "No unverifiable data. Every input must be tied to a credentialed verifier and pass protocol checks.",
       brownIcon: "/images/how_works3.png",
-      whiteIcon: "/images/how_works3-hover.png"
-    }
+      whiteIcon: "/images/how_works3-hover.png",
+    },
   ];
 
   return (
