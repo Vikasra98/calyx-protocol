@@ -11,50 +11,79 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10); // add shadow when scroll > 10px
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Animation Variants
+  const menuItemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, delay: 0.5 + i * 0.1 },
+    }),
+  };
+
   return (
-    <header
+    <motion.header
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={`flex items-center justify-between py-4 px-6 lg:px-36 sticky top-0 z-50 transition-shadow duration-300 ${
-        isScrolled ? "bg-[#0B2B22] shadow-md" : "bg-[#0B2B22]"
+        isScrolled ? "bg-[#0B2B22] shadow-md " : "bg-[#0B2B22]"
       }`}
     >
-      {/* Logo */}
-      <div className="flex items-center gap-2">
+      {/* Logo Animation */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex items-center gap-2"
+      >
         <Image
           src="/Logo/logo_White.png"
           alt="calyx logo"
           width={187}
           height={59}
         />
-      </div>
+      </motion.div>
 
-      {/* Desktop Nav */}
-      <div className="hidden md:flex items-center gap-8">
+      {/* Desktop Navigation */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="hidden md:flex items-center gap-8"
+      >
         <nav className="flex gap-8 text-white">
-          <Link href="/" className="hover:text-gray-300 text-xl">
-            Home
-          </Link>
-          <Link href="/aboutUs" className="hover:text-gray-300 text-xl">
-            About
-          </Link>
-          <a href="#" className="hover:text-gray-300 text-xl">
-            GitHub
-          </a>
-          <a href="#" className="hover:text-gray-300 text-xl">
-            Docs
-          </a>
+          {["Home", "About", "GitHub", "Docs"].map((item, index) => (
+            <motion.div
+              key={item}
+              custom={index}
+              initial="hidden"
+              animate="visible"
+              variants={menuItemVariants}
+            >
+              <Link
+                href={item === "About" ? "/aboutUs" : "#"}
+                className="hover:text-gray-300 text-xl"
+              >
+                {item}
+              </Link>
+            </motion.div>
+          ))}
         </nav>
-        <button className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-xl font-[600] cursor-pointer">
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, delay: 0.9 }}
+          className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-xl font-[600] cursor-pointer"
+        >
           Join Waitlist
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
 
       {/* Mobile Hamburger */}
       <div className="md:hidden">
@@ -76,28 +105,30 @@ const Header: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full bg-[#0B2B22] flex flex-col items-center gap-6 py-6 shadow-lg md:hidden z-50"
           >
-            <a href="/" className="hover:text-gray-300 text-lg text-white">
-              Home
-            </a>
-            <a
-              href="/aboutUs"
-              className="hover:text-gray-300 text-lg text-white"
+            {["Home", "About", "GitHub", "Docs"].map((item, index) => (
+              <motion.a
+                key={item}
+                href={item === "About" ? "/aboutUs" : "#"}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="hover:text-gray-300 text-lg text-white"
+              >
+                {item}
+              </motion.a>
+            ))}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all text-lg cursor-pointer"
             >
-              About
-            </a>
-            <a href="#" className="hover:text-gray-300 text-lg text-white">
-              GitHub
-            </a>
-            <a href="#" className="hover:text-gray-300 text-lg text-white">
-              Docs
-            </a>
-            <button className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-lg cursor-pointer">
               Join Waitlist
-            </button>
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 };
 

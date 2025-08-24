@@ -17,18 +17,40 @@ const FAQ: React.FC<FAQProps> = ({ faqs }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="max-w-3xl mx-auto lg:pb-[100px] pb-12">
-      <h2 className="lg:text-[52px] text-3xl font-bold text-center text-green-900 lg:mb-[60px] mb-8 font_title">
+    <motion.div
+      className="max-w-4xl mx-auto lg:pb-[100px] pb-12 px-4"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      {/* Title with animation */}
+      <motion.h2
+        className="lg:text-[52px] text-3xl font-bold text-center text-green-900 lg:mb-[60px] mb-8 font_title"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         FAQs
-      </h2>
+      </motion.h2>
+
+      {/* FAQ Items */}
       <div className="space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-gray-200 pb-4">
+          <motion.div
+            key={index}
+            className="border-b border-gray-200 pb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
             <button
               className="flex justify-between items-center w-full text-left text-lg font-medium text-green-900 cursor-pointer"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
-              <span className="font_title text-[28px] font-normal">
+              <span className="font_title text-[22px] md:text-[28px] font-normal">
                 {faq.question}
               </span>
               {openIndex === index ? (
@@ -48,16 +70,16 @@ const FAQ: React.FC<FAQProps> = ({ faqs }) => {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <p className="mt-2 text-[#1C1C1E] lg:text-xl font-normal text-sm">
+                  <p className="mt-2 text-[#1C1C1E] lg:text-xl text-base font-normal">
                     {faq.answer}
                   </p>
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
