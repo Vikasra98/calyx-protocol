@@ -42,3 +42,18 @@ body {
 .round_animate {
   animation: spin 5s linear infinite;
 }
+
+.timeline_nargin:nth-child(odd) {
+  margin-top: 175px;
+}
+
+.timeline_nargin:nth-child(even) {
+  margin-bottom: 183px;
+}
+.timeline_nargin:nth-child(odd) .alt_year {
+  top: -64px;
+}
+
+.timeline_nargin:nth-child(even) .alt_year {
+  bottom: -75px;
+}
