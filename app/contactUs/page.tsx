@@ -16,10 +16,7 @@ const page = () => {
   return (
     <>
       <HeaderSecondary />
-      <HeroSecondary
-        title="Contact Us"
-        backgroundImage="/images/contact_banner.jpg"
-      />
+      <HeroSecondary title="Contact Us" backgroundImage="/img/Contact_Us.png" />
       <ContactFormSection />
       <Map />
       <Footer />

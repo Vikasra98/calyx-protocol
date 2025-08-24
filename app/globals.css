@@ -10,7 +10,11 @@
 }
 
 body {
-  font-family: var(--font-inter);
+  font-family: "Inter", sans-serif;
+}
+
+.font_title {
+  font-family: "Libre Baskerville", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,12 +26,12 @@ body {
 
 body {
   color: var(--foreground);
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
 }
 
-.font_title {
+/* .font_title {
   font-family: "var(--font-libre-baskerville)";
-}
+} */
 
 @layer utilities {
   .animate-spin-slow {
