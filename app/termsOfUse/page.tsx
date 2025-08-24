@@ -10,7 +10,7 @@ const page = () => {
       <HeaderSecondary />
       <HeroSecondary
         title="Terms of Use"
-        backgroundImage="/images/privacy_bg.jpg"
+        backgroundImage="/img/Privacy_Policy.png"
       />
       <TermsOfUseContent />
       {/* <TimelineRoadmap /> */}

@@ -12,7 +12,7 @@ const HeroSecondary = (props: IProps) => {
   const {
     backgroundImage,
     title,
-    breadcrumb = [{ label: "Home", href: "/" }, { label: title }]
+    breadcrumb = [{ label: "Home", href: "/" }, { label: title }],
   } = props;
   return (
     <>
@@ -26,7 +26,7 @@ const HeroSecondary = (props: IProps) => {
           priority
         />
 
-        <div className="absolute inset-0 bg-[linear-gradient(269.66deg,#000000_50%,#000000_99.74%)] opacity-70"></div>
+        {/* <div className="absolute inset-0 bg-[linear-gradient(269.66deg,#000000_50%,#000000_99.74%)] opacity-70"></div> */}
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/35"></div>
