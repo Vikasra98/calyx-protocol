@@ -10,8 +10,8 @@ const HowItWorks = () => {
       title: "The Calyx Arc™",
       description:
         "A sigmoid scoring curve that rewards long-term, sustained impact over short-term optics.",
-      brownIcon: "/Icon/The_Calyx_Arc.png", // default PNG
-      whiteIcon: "/Icon/The_Calyx_Arc_white.png", // hover PNG
+      brownIcon: "/Icon/The_Calyx_Arc.png",
+      whiteIcon: "/Icon/The_Calyx_Arc_white.png",
     },
     {
       id: 2,
@@ -33,30 +33,38 @@ const HowItWorks = () => {
 
   return (
     <section className="pb-16 pt-5 px-6 lg:px-20 bg-white">
-      <h2 className="text-center text-4xl lg:text-7xl font-bold text-gray-900 mb-12 font_title">
+      {/* Animated Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center text-4xl lg:text-7xl font-bold text-gray-900 mb-12 font_title"
+      >
         How It Works
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {cards.map((card) => (
+        {cards.map((card, index) => (
           <motion.div
             key={card.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
             whileHover={{ y: -10 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="group rounded-xl shadow-md cursor-pointer px-7 py-12 flex flex-col items-center text-center 
                        bg-[#F9F9F7] text-[#0B2B22] 
                        hover:bg-[#0B2B22] hover:text-white 
                        transition-colors duration-300"
           >
             <div className="mb-10 relative w-[138px] h-[140px]">
-              {/* Brown icon (default) */}
               <Image
                 src={card.brownIcon}
                 alt="Brown Icon"
                 fill
                 className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300"
               />
-              {/* White icon (on hover) */}
               <Image
                 src={card.whiteIcon}
                 alt="White Icon"

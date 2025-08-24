@@ -1,55 +1,74 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { Github, Mail, Twitter } from "lucide-react";
 
 const Footer = () => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <footer className="bg-[#1A1A1A] text-gray-300 pt-[70px] pb-6 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-14 lg:gap-96">
+    <motion.footer
+      className="bg-[#1A1A1A] text-gray-300 pt-[70px] pb-6 px-6 lg:px-20"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+    >
+      <motion.div
+        className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-14 lg:gap-96"
+        variants={containerVariants}
+      >
         {/* Left Section */}
-        <div>
+        <motion.div variants={itemVariants}>
           <div className="flex items-center gap-2 mb-[18px]">
-            <Image
-              src="/Logo/logo_White.png"
-              alt="calyx logo"
-              width={180}
-              height={57}
-            />
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Image
+                src="/Logo/logo_White.png"
+                alt="calyx logo"
+                width={180}
+                height={57}
+              />
+            </motion.div>
           </div>
           <p className="mb-4 text-xl font-normal">
             Built in the Nordics. Open to the world.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="hover:opacity-80 transition">
-              <Image
-                src="/images/git.png"
-                alt="calyx logo"
-                width={30}
-                height={30}
-              />
-            </a>
-            <a href="#" className="hover:opacity-80 transition">
-              <Image
-                src="/images/mail.png"
-                alt="calyx logo"
-                width={30}
-                height={30}
-              />
-            </a>
-            <a href="#" className="hover:opacity-80 transition">
-              <Image
-                src="/images/twitter.png"
-                alt="calyx logo"
-                width={30}
-                height={30}
-              />
-            </a>
+            {["/images/git.png", "/images/mail.png", "/images/twitter.png"].map(
+              (icon, index) => (
+                <motion.a
+                  key={index}
+                  href="#"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="hover:opacity-80 transition"
+                >
+                  <Image src={icon} alt="social icon" width={30} height={30} />
+                </motion.a>
+              )
+            )}
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Section */}
-        <div className="flex-1">
+        <motion.div className="flex-1" variants={itemVariants}>
           <h3 className="text-2xl font-normal mb-5 font_title">Newsletter</h3>
           <form className="flex mb-7">
             <input
@@ -63,44 +82,43 @@ const Footer = () => {
             >
               <Image
                 src="/images/send.png"
-                alt="calyx logo"
+                alt="send icon"
                 width={30}
                 height={30}
               />
-              {/* ➤ */}
             </button>
           </form>
           <div className="flex gap-6 text-sm flex-wrap">
-            <a
-              href="/contactUs"
-              className="hover:text-white text-xl font-normal"
-            >
-              CONTACT
-            </a>
-            <a href="/aboutUs" className="hover:text-white text-xl font-normal">
-              ABOUT
-            </a>
-            <a href="#" className="hover:text-white text-xl font-normal">
-              DOCS
-            </a>
-            <a href="/privacy" className="hover:text-whit text-xl font-normale">
-              PRIVACY
-            </a>
-            <a
-              href="/termsOfUse"
-              className="hover:text-white text-xl font-normal"
-            >
-              TERMS
-            </a>
+            {[
+              { href: "/contactUs", label: "CONTACT" },
+              { href: "/aboutUs", label: "ABOUT" },
+              { href: "#", label: "DOCS" },
+              { href: "/privacy", label: "PRIVACY" },
+              { href: "/termsOfUse", label: "TERMS" },
+            ].map((link, index) => (
+              <motion.a
+                key={index}
+                href={link.href}
+                className="hover:text-white text-xl font-normal"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                {link.label}
+              </motion.a>
+            ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Bottom */}
-      <div className="border-t-2 border-[#d9d9d9] mt-8 pt-6 text-center text-base text-[#f5f5f3]">
+      <motion.div
+        className="border-t-2 border-[#d9d9d9] mt-8 pt-6 text-center text-base text-[#f5f5f3]"
+        variants={itemVariants}
+      >
         © Calyx Protocol 2025
-      </div>
-    </footer>
+      </motion.div>
+    </motion.footer>
   );
 };
 

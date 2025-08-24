@@ -29,19 +29,21 @@ const SelectDropdown: React.FC<SelectDropdownProps> = ({
   };
 
   return (
-    <div className="relative w-64">
+    <div className="relative w-full">
       {/* Dropdown Header */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="border rounded-md px-4 py-2 bg-white shadow-sm flex justify-between items-center cursor-pointer"
+        // className="w-full px-[30px] py-3.5 border-0 rounded-[10px] outline-none bg-white placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70]"
+
+        className="w-full px-[30px] py-3.5 border-0 rounded-[10px] outline-none bg-white placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] flex justify-between items-center cursor-pointer"
       >
-        <span className="text-gray-600">
+        <span className="text-[#607D70]">
           {selected ? selected.label : placeholder}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
-          className="text-gray-500"
+          className="text-[#607D70]"
         >
           ▼
         </motion.span>
