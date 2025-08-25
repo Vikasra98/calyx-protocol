@@ -26,6 +26,13 @@ const Header: React.FC = () => {
     }),
   };
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/aboutUs" },
+    { name: "GitHub", href: "https://github.com", external: true },
+    { name: "Docs", href: "/docs" },
+  ];
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -50 }}
@@ -59,19 +66,16 @@ const Header: React.FC = () => {
         className="hidden md:flex items-center gap-8"
       >
         <nav className="flex gap-8 text-white">
-          {["Home", "About", "GitHub", "Docs"].map((item, index) => (
+          {navLinks.map((item, index) => (
             <motion.div
-              key={item}
+              key={item.name}
               custom={index}
               initial="hidden"
               animate="visible"
               variants={menuItemVariants}
             >
-              <Link
-                href={item === "About" ? "/aboutUs" : "#"}
-                className="hover:text-gray-300 text-xl"
-              >
-                {item}
+              <Link href={item.href} className="hover:text-gray-300 text-xl">
+                {item.name}
               </Link>
             </motion.div>
           ))}
@@ -107,16 +111,16 @@ const Header: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full bg-[#0B2B22] flex flex-col items-center gap-6 py-6 shadow-lg md:hidden z-50"
           >
-            {["Home", "About", "GitHub", "Docs"].map((item, index) => (
+            {navLinks.map((item, index) => (
               <motion.a
-                key={item}
-                href={item === "About" ? "/aboutUs" : "#"}
+                key={item.name}
+                href={item.href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className="hover:text-gray-300 text-lg text-white"
               >
-                {item}
+                {item.name}
               </motion.a>
             ))}
             <motion.a
