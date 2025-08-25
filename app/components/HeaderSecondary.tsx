@@ -57,11 +57,12 @@ const HeaderSecondary = () => {
       }`}
     >
       {/* Logo with animation */}
-      <motion.div
+      <motion.a
         variants={logoVariants}
         initial="hidden"
         animate="show"
         className="flex items-center gap-2"
+        href="/"
       >
         <Image
           src="/Logo/fullcolor_horizontal_calyx_logo.png"
@@ -70,7 +71,7 @@ const HeaderSecondary = () => {
           height={59}
           priority
         />
-      </motion.div>
+      </motion.a>
 
       {/* Desktop Nav with staggered animation */}
       <motion.nav
@@ -98,9 +99,12 @@ const HeaderSecondary = () => {
           </motion.div>
         ))}
         <motion.div variants={itemVariants}>
-          <button className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-xl font-[600] cursor-pointer">
+          <a
+            href="/joinUs"
+            className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-xl font-[600] cursor-pointer"
+          >
             Join Waitlist
-          </button>
+          </a>
         </motion.div>
       </motion.nav>
 
@@ -147,9 +151,12 @@ const HeaderSecondary = () => {
             ))}
 
             <motion.div variants={itemVariants}>
-              <button className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all cursor-pointer] text-lg cursor-pointer">
+              <a
+                href="/joinUs"
+                className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all cursor-pointer] text-lg cursor-pointer"
+              >
                 Join Waitlist
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         )}
