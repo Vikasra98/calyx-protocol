@@ -21,15 +21,28 @@ const JoinUsContent = () => {
     console.log("Form Data:", data);
   };
   const userTypes = [
-    { label: "Admin", value: "admin" },
-    { label: "User", value: "user" },
-    { label: "Guest", value: "guest" },
+    { label: "Verifier", value: "verifier" },
+    { label: "Institution", value: "institution" },
+    { label: "Developer", value: "developer" },
+    { label: "Other", value: "other" },
   ];
 
   const countryList = [
-    { label: "Admin", value: "admin" },
-    { label: "User", value: "user" },
-    { label: "Guest", value: "guest" },
+    { label: "India", value: "india" },
+    { label: "United States", value: "united-states" },
+    { label: "United Kingdom", value: "united-kingdom" },
+    { label: "Canada", value: "canada" },
+    { label: "Australia", value: "australia" },
+    { label: "Germany", value: "germany" },
+    { label: "France", value: "france" },
+    { label: "Italy", value: "italy" },
+    { label: "Spain", value: "spain" },
+    { label: "Japan", value: "japan" },
+    { label: "China", value: "china" },
+    { label: "Brazil", value: "brazil" },
+    { label: "South Africa", value: "south-africa" },
+    { label: "Mexico", value: "mexico" },
+    { label: "Russia", value: "russia" },
   ];
 
   const handleSelectChange = (value: string) => {
@@ -57,6 +70,7 @@ const JoinUsContent = () => {
                 <input
                   {...register("fullName")}
                   type="text"
+                  maxLength={80}
                   placeholder="Full Name"
                   className={`w-full px-[30px] py-3.5 border-1 rounded-[10px] outline-none  placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] ${
                     errors.fullName
@@ -73,6 +87,7 @@ const JoinUsContent = () => {
               <div>
                 <input
                   {...register("email")}
+                  maxLength={120}
                   type="email"
                   placeholder="Email Address"
                   className={`w-full px-[30px] py-3.5 border-1 rounded-[10px] outline-none  placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] ${
@@ -90,6 +105,7 @@ const JoinUsContent = () => {
               <div>
                 <input
                   {...register("organization")}
+                  maxLength={120}
                   type="text"
                   placeholder="Organization / Company"
                   className={`w-full px-[30px] py-3.5 border-1 rounded-[10px] outline-none  placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] ${
@@ -107,6 +123,7 @@ const JoinUsContent = () => {
               <div>
                 <input
                   {...register("role")}
+                  maxLength={80}
                   type="text"
                   placeholder="Role / Title"
                   className={`w-full px-[30px] py-3.5 border-1 rounded-[10px] outline-none  placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] ${
@@ -135,6 +152,7 @@ const JoinUsContent = () => {
             <div>
               <input
                 {...register("website")}
+                maxLength={200}
                 type="text"
                 placeholder="LinkedIn / Website (optional)"
                 className={`w-full px-[30px] py-3.5 border-1 rounded-[10px] outline-none  placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] mb-6 ${
@@ -152,6 +170,7 @@ const JoinUsContent = () => {
             <div>
               <textarea
                 {...register("motivation")}
+                maxLength={500}
                 placeholder="Short Motivation (optional)"
                 cols={25}
                 rows={6}

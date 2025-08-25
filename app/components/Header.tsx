@@ -36,11 +36,12 @@ const Header: React.FC = () => {
       }`}
     >
       {/* Logo Animation */}
-      <motion.div
+      <motion.a
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="flex items-center gap-2"
+        href="/"
       >
         <Image
           src="/Logo/logo_White.png"
@@ -48,7 +49,7 @@ const Header: React.FC = () => {
           width={187}
           height={59}
         />
-      </motion.div>
+      </motion.a>
 
       {/* Desktop Navigation */}
       <motion.div
@@ -75,14 +76,15 @@ const Header: React.FC = () => {
             </motion.div>
           ))}
         </nav>
-        <motion.button
+        <motion.a
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.9 }}
           className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-xl font-[600] cursor-pointer"
+          href="/joinUs"
         >
           Join Waitlist
-        </motion.button>
+        </motion.a>
       </motion.div>
 
       {/* Mobile Hamburger */}
@@ -117,14 +119,15 @@ const Header: React.FC = () => {
                 {item}
               </motion.a>
             ))}
-            <motion.button
+            <motion.a
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
               className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all text-lg cursor-pointer"
+              href="/joinUs"
             >
               Join Waitlist
-            </motion.button>
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
