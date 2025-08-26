@@ -30,6 +30,7 @@ const Header: React.FC = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/aboutUs" },
     { name: "GitHub", href: "https://github.com", external: true },
+    { name: "Scoring", href: "/scoring" },
     { name: "Docs", href: "/docs" },
   ];
 

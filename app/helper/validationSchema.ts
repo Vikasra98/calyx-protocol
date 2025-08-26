@@ -7,16 +7,18 @@ const disposableDomains =
 export const waitlistSchema = yup.object().shape({
   fullName: yup
     .string()
-    .required("! Numbers, special characters like @#$%^&*")
+    .required("Fullname is required to proceed")
     .max(80, "Maximum 80 characters allowed")
     .matches(
       /^[A-Za-zÀ-ÖØ-öø-ÿ.'-](?:[A-Za-zÀ-ÖØ-öø-ÿ.'-]| [A-Za-zÀ-ÖØ-öø-ÿ.'-])*$/,
-      "Numbers, special characters like @#$%*&* are not allowed"
+      "Numbers and symbols like @ # $ % ^ & * ( ) are not allowed"
     ),
 
   email: yup
     .string()
-    .required("! Free text without @ and")
+    .required(
+      "Enter a valid email address (e.g., name@domain.com). Missing '@' or '.' is not allowed"
+    )
     .max(120, "Maximum 120 characters allowed")
     .matches(
       /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
@@ -30,19 +32,22 @@ export const waitlistSchema = yup.object().shape({
 
   organization: yup
     .string()
-    .max(120, "! Excessive symbols (!!, ###)")
-    .matches(/^[A-Za-z0-9À-ÖØ-öø-ÿ&.,\- ]+$/, "Invalid characters")
+    .max(120, "Organization name must be under 120 characters")
+    .matches(
+      /^[A-Za-z0-9À-ÖØ-öø-ÿ&.,\- ]+$/,
+      "Use only letters, numbers, spaces, &, . or –. !! or ### are not allowed"
+    )
     .nullable(),
 
   role: yup
     .string()
-    .max(80, "! 80 characters")
-    .matches(/^[A-Za-z0-9À-ÖØ-öø-ÿ .,'\-\/()]+$/, "Invalid characters")
+    .max(80, "Role must be under 80 characters")
+    .matches(/^[A-Za-z0-9À-ÖØ-öø-ÿ .,'\-\/()]+$/, "Use only letters")
     .nullable(),
 
   userType: yup
     .string()
-    .required("Please select a User Type")
+    .required("Selection is required to proceed")
     .oneOf(
       ["Verifier", "Institution", "Developer", "Other"],
       "Invalid selection"
@@ -55,8 +60,8 @@ export const waitlistSchema = yup.object().shape({
 
   website: yup
     .string()
-    .url("Must be a valid URL starting with http:// or https://")
-    .max(200, "Maximum 200 characters allowed")
+    .url("Enter a valid URL starting with http:// or https://")
+    .max(200, "Max 200 characters allowed")
     .nullable(),
 
   motivation: yup
@@ -64,7 +69,7 @@ export const waitlistSchema = yup.object().shape({
     .max(500, "! HTML tags, script injections")
     .test(
       "no-html",
-      "HTML tags are not allowed",
+      "Plain text only letters, numbers, and punctuation are allowed",
       (value) => !/<[^>]*>/.test(value || "")
     )
     .nullable(),
