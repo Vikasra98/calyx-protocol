@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 
 const documents = [
   {
-    src: "/icon/Protocol_Logic.png",
+    src: "/Icon/Protocol_Logic.png",
     title: "Protocol Logic",
     description: "How Calyx Arc® & Compound Matrix™ power ESG scoring.",
     button: "Open Document",
   },
   {
-    src: "/icon/Technical_Integration.png",
+    src: "/Icon/Technical_Integration.png",
     title: "Technical Integration",
     description: "APIs, setup steps, and best practices.",
     button: "Open Document",
   },
   {
-    src: "/icon/Governance.png",
+    src: "/Icon/Governance.png",
     title: "Governance",
     description: "Explore the model and community participation.",
     button: "Open Document",
   },
   {
-    src: "/icon/Use_Cases.png",
+    src: "/Icon/Use_Cases.png",
     title: "Use Cases",
     description: "Real-world applications across industries.",
     button: "Open Document",
