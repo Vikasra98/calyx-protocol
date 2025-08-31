@@ -10,21 +10,21 @@ const ProtocolInTesting = () => {
       title: "Join the Waitlist",
       description: "Get early access to the protocol",
       icon: "/images/protocol1.png",
-      link: "#",
+      link: "/stayUpdated",
     },
     {
       id: 2,
       title: "View the Scoring Docs",
       description: "Understand how verification works",
       icon: "/images/protocol2.png",
-      link: "#",
+      link: "/docs",
     },
     {
       id: 3,
       title: "Explore GitHub",
       description: "Check out our open-source code",
       icon: "/images/protocol3.png",
-      link: "#",
+      link: "gitHub",
     },
   ];
 
