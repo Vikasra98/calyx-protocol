@@ -50,7 +50,7 @@ const Footer = () => {
             Built in the Nordics. Open to the world.
           </p>
           <div className="flex gap-4">
-            {["/Icon/GitHub.png", "/Icon/Email_us_on.png", "/Icon/X.png"].map(
+            {["/icon/GitHub.png", "/icon/Email_us_on.png", "/icon/X.png"].map(
               (icon, index) => (
                 <motion.a
                   key={index}

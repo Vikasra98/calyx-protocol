@@ -48,14 +48,17 @@ const Hero: React.FC = () => {
           className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
         >
           <a
-            href="/docs"
+            href="/stayUpdated"
             className="bg-[#E59B73] px-5 sm:px-6 py-2.5 sm:py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all cursor-pointer text-sm sm:text-base md:text-xl font-[600]"
           >
-            View Docs →
+            Stay Updated →
           </a>
-          <button className="bg-[#174d3d] px-5 sm:px-6 py-2.5 sm:py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all cursor-pointer text-sm sm:text-base md:text-xl font-[600]">
-            Join the Waitlist
-          </button>
+          <a
+            href="/joinUs"
+            className="bg-[#174d3d] px-5 sm:px-6 py-2.5 sm:py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all cursor-pointer text-sm sm:text-base md:text-xl font-[600]"
+          >
+            Join
+          </a>
         </motion.div>
       </motion.div>
 

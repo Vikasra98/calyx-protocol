@@ -46,9 +46,10 @@ const HeaderSecondary = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/aboutUs" },
-    { name: "GitHub", href: "https://github.com", external: true },
+    // { name: "GitHub", href: "https://github.com", external: true },
     { name: "Scoring", href: "/scoring" },
     { name: "Docs", href: "/docs" },
+    { name: "Join", href: "/joinUs" },
   ];
 
   return (
@@ -83,28 +84,17 @@ const HeaderSecondary = () => {
       >
         {navLinks.map((link, index) => (
           <motion.div key={index} variants={itemVariants}>
-            {link.external ? (
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#1C1C1E] text-xl"
-              >
-                {link.name}
-              </a>
-            ) : (
-              <Link href={link.href} className="hover:text-[#1C1C1E] text-xl">
-                {link.name}
-              </Link>
-            )}
+            <Link href={link.href} className="hover:text-[#1C1C1E] text-xl">
+              {link.name}
+            </Link>
           </motion.div>
         ))}
         <motion.div variants={itemVariants}>
           <a
-            href="/joinUs"
+            href="/stayUpdated"
             className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-xl font-[600] cursor-pointer"
           >
-            Join Waitlist
+            Stay Updated
           </a>
         </motion.div>
       </motion.nav>
@@ -131,32 +121,21 @@ const HeaderSecondary = () => {
           >
             {navLinks.map((link, index) => (
               <motion.div key={index} variants={itemVariants}>
-                {link.external ? (
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-gray-300 text-lg text-white"
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    href={link.href}
-                    className="hover:text-gray-300 text-lg text-white"
-                  >
-                    {link.name}
-                  </Link>
-                )}
+                <Link
+                  href={link.href}
+                  className="hover:text-gray-300 text-lg text-white"
+                >
+                  {link.name}
+                </Link>
               </motion.div>
             ))}
 
             <motion.div variants={itemVariants}>
               <a
-                href="/joinUs"
+                href="/stayUpdated"
                 className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all cursor-pointer] text-lg cursor-pointer"
               >
-                Join Waitlist
+                Stay Updated
               </a>
             </motion.div>
           </motion.div>

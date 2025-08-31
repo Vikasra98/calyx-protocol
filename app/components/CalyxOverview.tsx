@@ -35,7 +35,7 @@ const CalyxOverview = () => {
           style={{ boxShadow: "0px 4px 20px 0px #0000001F" }}
         >
           <Image
-            src="/images/Calyx_Arc_Image.jpg"
+            src="/img/Calyx_Arc_Image.png"
             alt="Calyx Arc"
             width={525}
             height={329}
@@ -64,7 +64,7 @@ const CalyxOverview = () => {
           style={{ boxShadow: "0px 4px 20px 0px #0000001F" }}
         >
           <Image
-            src="/images/Compound_Matrix.jpg"
+            src="/img/Compound_Matrix.png"
             alt="Compound Matrix"
             width={525}
             height={329}

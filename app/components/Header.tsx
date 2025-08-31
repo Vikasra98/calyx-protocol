@@ -29,9 +29,9 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/aboutUs" },
-    { name: "GitHub", href: "https://github.com", external: true },
     { name: "Scoring", href: "/scoring" },
     { name: "Docs", href: "/docs" },
+    { name: "Join", href: "/joinUs" },
   ];
 
   return (
@@ -86,9 +86,9 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.9 }}
           className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#d18761] text-xl font-[600] cursor-pointer"
-          href="/joinUs"
+          href="/stayUpdated"
         >
-          Join Waitlist
+          Stay Updated
         </motion.a>
       </motion.div>
 
@@ -129,9 +129,9 @@ const Header: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
               className="bg-[#d99a70] text-white px-5 py-3 rounded-md hover:bg-[#fff] hover:text-[#174d3d] hover:transition-all text-lg cursor-pointer"
-              href="/joinUs"
+              href="/stayUpdated"
             >
-              Join Waitlist
+              Stay Updated
             </motion.a>
           </motion.div>
         )}

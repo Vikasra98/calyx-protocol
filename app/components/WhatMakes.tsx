@@ -7,25 +7,33 @@ import { motion } from "framer-motion";
 const WhatMakes = () => {
   const cards = [
     {
-      src: "/images/icons/whatMakes1.png",
-      title: "Auditable Data",
-      subTitle: "Every score is backed by verifiable sources.",
-    },
-    {
-      src: "/images/icons/whatMakes2.png",
-      title: "On-Chain Proof",
-      subTitle: "Impact is tokenized into measurable, transferable value.",
+      src: "/images/icons/math.png",
+      title: "Mathematical Non-Linearity",
+      subTitle:
+        "Proof doesn’t just add up, it compounds. Verified actions that align grow exponentially stronger, rewarding consistency and integrity across time, teams, and systems.",
     },
     {
       src: "/images/icons/whatMakes3.png",
       title: "Interoperability",
       subTitle:
-        "Works seamlessly across protocols, geographies, and industries.",
+        "Proof flows across reporting frameworks (GRI, SASB, CSRD), financial systems (banks, investors, insurers), and digital infrastructures (blockchains, APIs, registries). No lock-ins, no silos.",
     },
     {
       src: "/images/icons/whatMakes4.png",
       title: "Aligned Incentives",
-      subTitle: "Rewards are built for those who create lasting change.",
+      subTitle:
+        "Verifiers, companies, and stakeholders all benefit when verified proof compounds and circulates, creating shared value.",
+    },
+    {
+      src: "/images/icons/whatMakes2.png",
+      title: "On-Chain Proof",
+      subTitle:
+        "Each data point is anchored on-chain, ensuring permanence and tamper-resistance.",
+    },
+    {
+      src: "/images/icons/whatMakes1.png",
+      title: "Auditable Data",
+      subTitle: "Every score is backed by verifiable sources.",
     },
   ];
 
@@ -69,7 +77,7 @@ const WhatMakes = () => {
 
       {/* Cards Animation */}
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-4 gap-6"
+        className="flex flex-wrap justify-center gap-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -79,7 +87,8 @@ const WhatMakes = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="flex items-center justify-start flex-col mb-[18px] py-5 px-4 rounded-[10px]"
+            whileHover={{ y: -10 }}
+            className="flex items-center justify-start flex-col mb-[18px] py-5 lg:py-[30px] px-4 rounded-[10px] w-full sm:w-[300px] md:w-[381px] lg:w-[374px]"
             style={{ boxShadow: "0px 4px 20px 0px #0000001F" }}
           >
             <Image
@@ -89,7 +98,7 @@ const WhatMakes = () => {
               height={80}
               width={80}
             />
-            <h6 className="font_title text-2xl font-normal leading-8 text-[#12291E] mb-2.5">
+            <h6 className="font_title text-2xl font-normal leading-8 text-[#12291E] mb-2.5 text-center">
               {item.title}
             </h6>
             <p className="text-lg font-normal leading-7 text-[#1C1C1E] text-center">

@@ -46,7 +46,7 @@ const EsgScores = () => {
           className="flex justify-center"
         >
           <Image
-            src="/images/esg.png"
+            src="/images/esg.gif"
             alt="esg_img"
             height={364}
             width={375}

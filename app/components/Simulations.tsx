@@ -1,151 +1,126 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Simulations = () => {
   const roles = [
     {
       id: 1,
-      title: "Simulation Example",
-      description:
-        "Auditors, certifiers, and credentialed pros who validate ESG claims.",
-      icon: "/images/who1.png",
-      features: [
-        "Company A reduces emissions by 15% YoY.",
-        "Verified data is logged → Compound Matrix™ calculates ESG uplift.",
-        "Transparent audit trails",
-        "Result: Tokenized impact credits representing verifiable sustainability gains.",
-      ],
+      title: "Single Verification (Calyx Arc™)",
+      icon: "/images/simulation1.png",
+      content: `A verifier confirms one action — for instance, a company’s reported reduction in electricity use. The Arc mints a fixed issuance of 100 BUDS, creating a proof that endures and remains consultable over time.`,
+    },
+    {
+      id: 2,
+      title: "Intra-Entity Alignment (Compound Matrix™)",
+      icon: "/images/simulation2.png",
+      content: `The same company also verifies reductions in emissions and water usage. Because these actions align, the issuance compounds. Instead of simply receiving 3 × 100 = 300 BUDS, the company’s account mints 450 BUDS. Alignment multiplies value.`,
+    },
+    {
+      id: 3,
+      title: "Inter-Entity Alignment (Compound Matrix™)",
+      icon: "/images/simulation3.png",
+      content: `A supplier verifies its emission reductions, and the buyer verifies that it purchased those low-emission goods. Both verifications align across entities. Instead of 200 BUDS each, the supplier and buyer each receive 300 BUDS, reflecting the amplified trust created by connected proof.`,
     },
   ];
 
   const [activeRole, setActiveRole] = useState(roles[0]);
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+  const [equalHeight, setEqualHeight] = useState<number | undefined>(undefined);
+
+  // Equalize left & right heights
+  useEffect(() => {
+    if (leftRef.current && rightRef.current) {
+      const leftHeight = leftRef.current.offsetHeight;
+      const rightHeight = rightRef.current.offsetHeight;
+      setEqualHeight(Math.max(leftHeight, rightHeight));
+    }
+  }, [activeRole]);
 
   return (
     <section className="pb-24 pt-14 px-6 lg:px-36 w-full bg-white lg:mt-12">
+      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="lg:text-[52px] font_title text-2xl md:text-3xl font-bold text-[#12291E] lg:mb-[60px] mb-4 text-center"
+        className="lg:text-[52px] font_title text-2xl md:text-3xl font-bold text-[#12291E] lg:mb-[30px] mb-4 text-center"
       >
         Example Simulations
       </motion.h2>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
+      {/* Intro paragraph */}
+      <p className="text-[#1C1C1E] lg:text-xl font-normal text-lg text-center lg:mb-[60px] mb-4">
+        BUDS Tokens <br />
+        Every verified action in Calyx mints BUDS — Blockchain Units of Derived
+        Signal. BUDS are not a currency or a rating; they are cryptographic
+        tokens of verified trust. Each unit is derived mathematically from a
+        confirmed fact, consultable over time, and compounding in value when
+        aligned actions reinforce one another.
+      </p>
+
+      <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
         {/* Left side cards */}
-        <div className="space-y-6 h-full w-full">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            whileHover={{ y: -4 }}
-            className="flex items-start gap-4 p-6 rounded-lg border cursor-pointer transition-colors duration-300 border-gray-300 bg-white hover:border-[#0B2B22]"
-          >
-            <Image
-              src={"/Icon/Verifiers.png"}
-              alt="Verifiers"
-              width={80}
-              height={80}
-              className="shrink-0 lg:mt-2"
-            />
-            <div>
-              <h3 className="text-2xl font-semibold text-[#12291e] mb-1 font_title">
-                Company reports renewable energy usage.
-              </h3>
-              <p className="text-[#1C1C1E] text-lg">
-                → Verifier confirms data source (e.g., audited utility bills).
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            whileHover={{ y: -4 }}
-            className="flex items-start gap-4 p-6 rounded-lg border cursor-pointer transition-colors duration-300 border-gray-300 bg-white hover:border-[#0B2B22]"
-          >
-            <Image
-              src={"/Icon/verification.png"}
-              alt="verification"
-              width={80}
-              height={80}
-              className="shrink-0 lg:mt-2"
-            />
-            <div>
-              <h3 className="text-2xl font-semibold text-[#12291e] mb-1 font_title">
-                Calyx Arc™ logs verification event on-chain.
-              </h3>
-              <p className="text-[#1C1C1E] text-lg">
-                → Compound Matrix™ assigns weighted score.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            whileHover={{ y: -4 }}
-            className="flex items-start gap-4 p-6 rounded-lg border cursor-pointer transition-colors duration-300 border-gray-300 bg-white hover:border-[#0B2B22]"
-          >
-            <Image
-              src={"/Icon/api.png"}
-              alt="api"
-              width={80}
-              height={80}
-              className="shrink-0 lg:mt-2"
-            />
-            <div>
-              <h3 className="text-2xl font-semibold text-[#12291e] mb-1 font_title">
-                Score mints a tokenized "Proof of Impact" asset.
-              </h3>
-              <p className="text-[#1C1C1E] text-lg">
-                → Institutions can track, trade, or integrate in portfolios.
-              </p>
-            </div>
-          </motion.div>
+        <div
+          ref={leftRef}
+          style={{ height: equalHeight }}
+          className="space-y-6 w-full mb-8 lg:mb-0"
+        >
+          {roles.map((role, index) => (
+            <motion.div
+              key={role.id}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ y: -4 }}
+              onClick={() => setActiveRole(role)}
+              className={`flex lg:items-center items-start gap-4 lg:py-[14px] lg:px-[20px] p-6 rounded-lg border cursor-pointer transition-colors duration-300 
+                ${
+                  activeRole.id === role.id
+                    ? "border-[#0B2B22] bg-gray-50"
+                    : "border-gray-300 bg-white hover:border-[#0B2B22]"
+                }`}
+            >
+              <Image
+                src={role.icon}
+                alt={role.title}
+                width={80}
+                height={80}
+                className="shrink-0 lg:mt-2"
+              />
+              <div>
+                <h3 className="lg:text-[22px] text-xl font-normal text-[#12291e] font_title">
+                  {role.title}
+                </h3>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Right side features */}
+        {/* Right side content */}
         <motion.div
+          ref={rightRef}
+          style={{ height: equalHeight }}
           key={activeRole.id}
           initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-[#0B2B22] text-white p-8 rounded-lg flex lg:flex-row lg:items-stretch flex-col justify-between h-full lg:max-w-[474px] w-full"
+          className="bg-[#0B2B22] text-white lg:py-[90px] lg:px-[48px] p-8 rounded-lg flex flex-col justify-between lg:max-w-[474px] w-full"
         >
-          <div>
-            <h3 className="text-[28px] font-normal mb-10 font_title">
-              {activeRole.title}
-            </h3>
-            <ul className="space-y-4">
-              {activeRole.features.map((feature, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.2 }}
-                  viewport={{ once: true }}
-                  className="flex items-start gap-6"
-                >
-                  <div className="bg-white w-[26px] h-[26px] rounded flex items-center justify-center shrink-0">
-                    <Check className="w-[16px] h-[16px] text-[#0B2B22]" />
-                  </div>
-                  <span className="text-xl font-normal">{feature}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
+          <motion.p
+            key={activeRole.content}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-xl font-normal"
+          >
+            {activeRole.content}
+          </motion.p>
         </motion.div>
       </div>
     </section>

@@ -5,8 +5,10 @@ import SelectDropdown from "./SelectDropdown";
 import { waitlistSchema } from "../helper/validationSchema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { usePathname } from "next/navigation";
 
 const JoinUsContent = () => {
+  const pathname = usePathname();
   const {
     register,
     handleSubmit,
@@ -57,11 +59,17 @@ const JoinUsContent = () => {
         >
           <div className="w-full flex items-center flex-col">
             <h2 className="lg:text-[52px] font_title text-2xl md:text-3xl font-bold text-[#12291E] lg:mb-[30px] mb-4 text-center">
-              Join the Calyx Waitlist Today
+              {pathname === "/joinUs" && "Join"}
+              {pathname === "/stayUpdated" && "Stay Updated"}
+              {/* the Calyx Waitlist Today */}
             </h2>
             <p className="text-[#1C1C1E] text-xl font-normal lg:mb-[40px] mb-6 lg:max-w-3xl text-center">
-              Join our waitlist to get early updates, exclusive access, and play
-              a role in building auditable ESG standards.
+              {/* Join our waitlist to get early updates, exclusive access, and play
+              a role in building auditable ESG standards. */}
+              {pathname === "/joinUs" &&
+                "Join Calyx to begin contributing verified ESG data. Select your role and start the credentialed onboarding process."}
+              {pathname === "/stayUpdated" &&
+                "Want to follow Calyx without joining as a verifier? Join our update list to receive news, research, and protocol milestones."}
             </p>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -120,36 +128,41 @@ const JoinUsContent = () => {
                   </p>
                 )}
               </div>
-              <div>
-                <input
-                  {...register("role")}
-                  maxLength={80}
-                  type="text"
-                  placeholder="Role / Title"
-                  className={`w-full px-[30px] py-3.5 border-1 rounded-[10px] outline-none  placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] ${
-                    errors.role
-                      ? "border-[#FF6969] bg-[#FFF6F6]"
-                      : "border-0 bg-white border-white"
-                  }`}
-                />
-                {errors.role && (
-                  <p className="text-[#FF1F23] text-sm font-normal mt-1.5">
-                    {errors.role.message}
-                  </p>
-                )}
-              </div>
-              <SelectDropdown
-                options={userTypes}
-                placeholder="User Type"
-                onChange={handleSelectChange}
-              />
+              {pathname === "/joinUs" && (
+                <>
+                  <div>
+                    <input
+                      {...register("role")}
+                      maxLength={80}
+                      type="text"
+                      placeholder="Role / Title"
+                      className={`w-full px-[30px] py-3.5 border-1 rounded-[10px] outline-none  placeholder:text-[#607D70] placeholder:text-base text-base text-[#607D70] ${
+                        errors.role
+                          ? "border-[#FF6969] bg-[#FFF6F6]"
+                          : "border-0 bg-white border-white"
+                      }`}
+                    />
+                    {errors.role && (
+                      <p className="text-[#FF1F23] text-sm font-normal mt-1.5">
+                        {errors.role.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <SelectDropdown
+                    options={userTypes}
+                    placeholder="User Type"
+                    onChange={handleSelectChange}
+                  />
+                </>
+              )}
               <SelectDropdown
                 options={countryList}
                 placeholder="Country"
                 onChange={handleSelectChange}
               />
             </div>
-            <div>
+            {/* <div>
               <input
                 {...register("website")}
                 maxLength={200}
@@ -185,7 +198,7 @@ const JoinUsContent = () => {
                   {errors.motivation.message}
                 </p>
               )}
-            </div>
+            </div> */}
             <div className="flex items-end justify-center w-full mb-6">
               <input
                 type="checkbox"

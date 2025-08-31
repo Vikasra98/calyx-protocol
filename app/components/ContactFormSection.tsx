@@ -32,12 +32,13 @@ const ContactFormSection = () => {
               {
                 icon: "/Icon/Email_us_on.png",
                 title: "Email us on",
-                value: "company@gmail.com",
+                value: "info@calyxprotocol.org",
               },
               {
                 icon: "/Icon/Address.png",
                 title: "Address",
-                value: "102 Washington, New York",
+                value:
+                  "Regus Helsinki, Mannerheimintie 12B, 00100 Helsinki, Finland",
               },
             ].map((item, index) => (
               <motion.div

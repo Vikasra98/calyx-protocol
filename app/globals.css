@@ -45,16 +45,23 @@ body {
 }
 
 .timeline_nargin:nth-child(odd) {
-  margin-top: 175px;
+  margin-top: 198px;
 }
 
 .timeline_nargin:nth-child(even) {
-  margin-bottom: 183px;
+  margin-bottom: 173px;
 }
+
 .timeline_nargin:nth-child(odd) .alt_year {
-  top: -64px;
+  top: -96px;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .timeline_nargin:nth-child(even) .alt_year {
-  bottom: -75px;
+  bottom: -110px;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
