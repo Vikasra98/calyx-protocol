@@ -7,7 +7,7 @@ const PrivacyContent = () => {
     <div className="bg-white text-black min-h-screen flex justify-center px-4 sm:px-6 md:px-12 lg:px-20 lg:py-[100px] py-8">
       <div className="max-w-5xl w-full">
         {/* Heading */}
-        <h1 className="lg:text-[44px] md:text-3xl text-2xl font-bold text-center lg:mb-[50px] mb-4 text-[#12291E] font_title">
+        <h1 className="lg:text-[52px] text-4xl sm:text-3xl md:text-4xl font-bold text-center text-[#12291E] font_title lg:mb-[50px] mb-4">
           Privacy Policy
         </h1>
 
@@ -18,20 +18,20 @@ const PrivacyContent = () => {
         {/* Intro */}
 
         {/* Information We Collect */}
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 font_title">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 font_title lg:text-[36px] text-[#12291E]">
           Information We Collect
         </h2>
-        <p className="lg:mb-[40px] mb-6 md:text-lg text-base font-normal text-start leading-relaxed">
+        <p className="lg:mb-[40px] mb-6 md:text-lg lg:text-xl text-base font-normal text-start leading-relaxed">
           Calyx collects only the information necessary to operate the protocol,
           fulfill legal and compliance obligations, and protect the integrity of
           BUDS (Blockchain Units of Derived Signal). This Privacy Policy and
           Terms of Use explain what information we collect, how we use it, and
           the choices available to you.
         </p>
-        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside">
+        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside lg:ps-11 ps-9 lg:mt-[40px] mt-6">
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              1. Account Information <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              1. Account Information
             </strong>{" "}
             <p className="lg:mt-5 mt-3">
               When you register, we may collect your name, email address,
@@ -40,8 +40,8 @@ const PrivacyContent = () => {
             </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E]">
-              2. Verification Data <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              2. Verification Data
             </strong>{" "}
             <p className="lg:mt-5 mt-3">
               For verifiers, we collect details of submitted verifications,
@@ -50,8 +50,8 @@ const PrivacyContent = () => {
             </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E]">
-              3. Technical Information <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              3. Technical Information
             </strong>{" "}
             <p className="lg:mt-5 mt-3">
               We may automatically collect IP addresses, device identifiers,
@@ -60,8 +60,8 @@ const PrivacyContent = () => {
             </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E]">
-              4. On-Chain Records <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              4. On-Chain Records
             </strong>{" "}
             <p className="lg:mt-5 mt-3">
               Verification events, BUDS issuance, and propagation events are
@@ -71,8 +71,8 @@ const PrivacyContent = () => {
             </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              5. Compliance Data <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              5. Compliance Data
             </strong>{" "}
             <p className="lg:mt-5 mt-3">
               For regulatory purposes, we may collect and process KYC/AML
@@ -81,8 +81,8 @@ const PrivacyContent = () => {
             </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              6. Communications <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              6. Communications
             </strong>{" "}
             <p className="lg:mt-5 mt-3">
               If you contact Calyx, we may retain your communications (email,
@@ -91,8 +91,8 @@ const PrivacyContent = () => {
             </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              7. Cookies & Analytics <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              7. Cookies & Analytics
             </strong>{" "}
             <p className="lg:mt-5 mt-3">
               Our website may use cookies and analytics tools to monitor
@@ -103,282 +103,355 @@ const PrivacyContent = () => {
         </ul>
 
         {/* How We Use Your Information */}
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 font_title">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 font_title lg:text-[36px] text-[#12291E]">
           How We Use Your Information
         </h2>
-        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-decimal list-inside">
+        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside lg:ps-11 ps-9 lg:mt-[40px] mt-6">
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Service Provision <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              1. Service Provision
             </strong>{" "}
-            To register accounts, enable verifier accreditation, issue BUDS, and
-            provide access to dashboards and protocol functions.
+            <p className="lg:mt-5 mt-3">
+              To register accounts, enable verifier accreditation, issue BUDS,
+              and provide access to dashboards and protocol functions.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Protocol Integrity <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              2. Protocol Integrity
             </strong>{" "}
-            To authenticate verifiers, prevent fraud, validate verifications,
-            and ensure issuance is accurate and tamper-resistant.
+            <p className="lg:mt-5 mt-3">
+              To authenticate verifiers, prevent fraud, validate verifications,
+              and ensure issuance is accurate and tamper-resistant.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Compliance <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              3. Compliance
             </strong>{" "}
-            To satisfy legal, regulatory, and contractual obligations, including
-            KYC/AML checks and lawful requests.
+            <p className="lg:mt-5 mt-3">
+              To satisfy legal, regulatory, and contractual obligations,
+              including KYC/AML checks and lawful requests.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Security <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              4. Security
             </strong>{" "}
-            To monitor, detect, and prevent unauthorized access or malicious
-            activity.
+            <p className="lg:mt-5 mt-3">
+              To monitor, detect, and prevent unauthorized access or malicious
+              activity.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Improvement & Analytics <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              5. Improvement & Analytics
             </strong>{" "}
             To analyze protocol usage, performance, and adoption.
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Communication <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              6. Communication
             </strong>{" "}
-            To respond to inquiries, notify you of changes, or provide protocol
-            updates.
+            <p className="lg:mt-5 mt-3">
+              To respond to inquiries, notify you of changes, or provide
+              protocol updates.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Enforcement <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              7. Enforcement
             </strong>{" "}
-            To investigate and enforce compliance with these Terms of Use.
+            <p className="lg:mt-5 mt-3">
+              To investigate and enforce compliance with these Terms of Use.
+            </p>
           </li>
         </ul>
 
         {/* Data Sharing */}
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 font_title">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 font_title lg:text-[36px] text-[#12291E]">
           Data Sharing
         </h2>
-        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-decimal list-inside">
+        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside lg:ps-11 ps-9 lg:mt-[40px] mt-6">
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              With Verifiers <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              1. With Verifiers
             </strong>{" "}
-            Shared for confirming facts, minting BUDS, and maintaining records.
+            <p className="lg:mt-5 mt-3">
+              Shared for confirming facts, minting BUDS, and maintaining
+              records.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              On-Chain Publication <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              2. On-Chain Publication
             </strong>{" "}
-            Certain events are recorded immutably on blockchain and cannot be
-            altered or deleted.
+            <p className="lg:mt-5 mt-3">
+              Certain events are recorded immutably on blockchain and cannot be
+              altered or deleted.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              With Service Providers <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              3. With Service Providers
             </strong>{" "}
-            Contractors, cloud providers, and partners under confidentiality
-            agreements.
+            <p className="lg:mt-5 mt-3">
+              Contractors, cloud providers, and partners under confidentiality
+              agreements.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              For Legal Compliance <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              4. For Legal Compliance
             </strong>{" "}
-            Disclosure where required by regulators, courts, or law enforcement.
+            <p className="lg:mt-5 mt-3">
+              Disclosure where required by regulators, courts, or law
+              enforcement.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Corporate Transactions <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              5. Corporate Transactions
             </strong>{" "}
-            Data may transfer in case of merger or restructuring.
+            <p className="lg:mt-5 mt-3">
+              Data may transfer in case of merger or restructuring.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              To Protect Rights and Security <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              6. To Protect Rights and Security
             </strong>{" "}
-            Shared when necessary to prevent fraud or safeguard users.
+            <p className="lg:mt-5 mt-3">
+              Shared when necessary to prevent fraud or safeguard users.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Anonymized & Aggregated Data <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              7. Anonymized & Aggregated Data
             </strong>{" "}
-            May be shared for research or benchmarking without identifying
-            individuals.
+            <p className="lg:mt-5 mt-3">
+              May be shared for research or benchmarking without identifying
+              individuals.
+            </p>
           </li>
         </ul>
 
         {/* Data Security */}
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 font_title">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 font_title lg:text-[36px] text-[#12291E]">
           Data Security
         </h2>
-        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-decimal list-inside">
+        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside lg:ps-11 ps-9 lg:mt-[40px] mt-6">
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Security Measures <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              1. Security Measures
             </strong>{" "}
-            Encryption, access controls, audit logs, and regular reviews.
+            <p className="lg:mt-5 mt-3">
+              Encryption, access controls, audit logs, and regular reviews.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              On-Chain Anchoring <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              2. On-Chain Anchoring
             </strong>{" "}
-            Immutable records on blockchain cannot be deleted.
+            <p className="lg:mt-5 mt-3">
+              Immutable records on blockchain cannot be deleted.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Verifier Responsibility <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              3. Verifier Responsibility
             </strong>{" "}
-            Verifiers must secure their own credentials and devices.
+            <p className="lg:mt-5 mt-3">
+              Verifiers must secure their own credentials and devices.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              No Absolute Security <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              4. No Absolute Security
             </strong>{" "}
-            Data transmission carries inherent risks.
+            <p className="lg:mt-5 mt-3">
+              Data transmission carries inherent risks.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Third-Party Dependencies <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              5. Third-Party Dependencies
             </strong>{" "}
-            Calyx disclaims liability for failures of third-party
-            infrastructure.
+            <p className="lg:mt-5 mt-3">
+              Calyx disclaims liability for failures of third-party
+              infrastructure.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Incident Response <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              6. Incident Response
             </strong>{" "}
-            We will investigate and comply with notification requirements in
-            case of a breach.
+            <p className="lg:mt-5 mt-3">
+              We will investigate and comply with notification requirements in
+              case of a breach.
+            </p>
           </li>
         </ul>
 
         {/* Your Rights */}
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 font_title">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 font_title lg:text-[36px] text-[#12291E]">
           Your Rights and Choices
         </h2>
         <p className="mb-6 md:text-lg text-base font-normal leading-relaxed">
           If you are located in the EU, EEA, or similar jurisdictions, you may
           have rights under applicable data protection laws:
         </p>
-        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-decimal list-inside">
+        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside lg:ps-11 ps-9 lg:mt-[40px] mt-6">
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Access <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              1. Access
             </strong>{" "}
-            Request confirmation of whether we process your data and obtain a
-            copy.
+            <p className="lg:mt-5 mt-3">
+              Request confirmation of whether we process your data and obtain a
+              copy.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Rectification <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              2. Rectification
             </strong>{" "}
-            Correct inaccurate or incomplete data.
+            <p className="lg:mt-5 mt-3">
+              Correct inaccurate or incomplete data.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Erasure <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              3. Erasure
             </strong>{" "}
-            Request deletion, except immutable blockchain records.
+            <p className="lg:mt-5 mt-3">
+              Request deletion, except immutable blockchain records.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Restriction <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              4. Restriction
             </strong>{" "}
-            Request processing restriction under certain circumstances.
+            <p className="lg:mt-5 mt-3">
+              Request processing restriction under certain circumstances.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Data Portability <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              5. Data Portability
             </strong>{" "}
-            Receive data in a structured format and transfer it elsewhere.
+            <p className="lg:mt-5 mt-3">
+              Receive data in a structured format and transfer it elsewhere.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Objection <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              6. Objection
             </strong>{" "}
-            Object to processing, including for analytics or communication.
+            <p className="lg:mt-5 mt-3">
+              Object to processing, including for analytics or communication.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Withdrawal of Consent <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              7. Withdrawal of Consent
             </strong>{" "}
-            Withdraw consent at any time.
+            <p className="lg:mt-5 mt-3">Withdraw consent at any time.</p>
           </li>
         </ul>
 
         {/* International Users */}
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 font_title">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 font_title lg:text-[36px] text-[#12291E]">
           International Users
         </h2>
-        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-decimal list-inside">
+        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside lg:ps-11 ps-9 lg:mt-[40px] mt-6">
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Global Operations <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              1. Global Operations
             </strong>{" "}
-            Your data may be transferred and processed internationally.
+            <p className="lg:mt-5 mt-3">
+              Your data may be transferred and processed internationally.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Cross-Border Transfers <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              2. Cross-Border Transfers
             </strong>{" "}
-            SCCs or safeguards may be applied where required by law.
+            <p className="lg:mt-5 mt-3">
+              SCCs or safeguards may be applied where required by law.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              On-Chain Records <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              3. On-Chain Records
             </strong>{" "}
-            Immutable blockchain records are globally accessible.
+            <p className="lg:mt-5 mt-3">
+              Immutable blockchain records are globally accessible.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Responsibility of Users <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              4. Responsibility of Users
             </strong>{" "}
-            You are responsible for compliance with local laws when using Calyx.
+            <p className="lg:mt-5 mt-3">
+              You are responsible for compliance with local laws when using
+              Calyx.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              No Liability <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              5. No Liability
             </strong>{" "}
-            Calyx disclaims responsibility for conflicts between immutable
-            protocol operations and local laws.
+            <p className="lg:mt-5 mt-3">
+              Calyx disclaims responsibility for conflicts between immutable
+              protocol operations and local laws.
+            </p>
           </li>
         </ul>
 
         {/* Policy Updates */}
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-6 font_title">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 font_title lg:text-[36px] text-[#12291E]">
           Policy Updates
         </h2>
-        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-decimal list-inside">
+        <ul className="space-y-6 md:text-lg text-base font-normal leading-relaxed mb-[60px] list-none list-inside lg:ps-11 ps-9 lg:mt-[40px] mt-6">
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Right to Amend <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              1. Right to Amend
             </strong>{" "}
-            Calyx may update or replace this policy at any time.
+            <p className="lg:mt-5 mt-3">
+              Calyx may update or replace this policy at any time.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Effective Upon Posting <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              2. Effective Upon Posting
             </strong>{" "}
-            Updates become effective immediately once posted.
+            <p className="lg:mt-5 mt-3">
+              Updates become effective immediately once posted.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              No Obligation to Notify <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              3. No Obligation to Notify
             </strong>{" "}
-            Calyx may notify but is not required to.
+            <p className="lg:mt-5 mt-3">
+              Calyx may notify but is not required to.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Retroactive Application <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              4. Retroactive Application
             </strong>{" "}
-            Updates may apply to all past and future data.
+            <p className="lg:mt-5 mt-3">
+              Updates may apply to all past and future data.
+            </p>
           </li>
           <li>
-            <strong className="font_title lg:text-4xl text-xl font-bold text-[#12291E] ">
-              Severability <br />
+            <strong className="font_title font-bold lg:text-[28px] text-xl mb-4 text-[#12291E] ">
+              5. Severability
             </strong>{" "}
-            If any part is invalid, the rest remains enforceable.
+            <p className="lg:mt-5 mt-3">
+              If any part is invalid, the rest remains enforceable.
+            </p>
           </li>
         </ul>
 
