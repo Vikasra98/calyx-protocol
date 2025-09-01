@@ -7,28 +7,28 @@ const documents = [
     src: "/Icon/Protocol_Logic.png",
     title: "Protocol Logic",
     description: "How Calyx Arc® & Compound Matrix™ power ESG scoring.",
-    pdf: "/doc/protocol_logic.pdf",
+    pdf: "/doc/Protocol_Logic.pdf",
     button: "Open Document",
   },
   {
     src: "/Icon/Technical_Integration.png",
     title: "Technical Integration",
     description: "APIs, setup steps, and best practices.",
-    pdf: "/doc/technical_integration.pdf",
+    pdf: "/doc/Technical_Integration.pdf",
     button: "Open Document",
   },
   {
     src: "/Icon/Governance.png",
     title: "Governance",
     description: "Explore the model and community participation.",
-    pdf: "/doc/governance.pdf",
+    pdf: "/doc/Governance.pdf",
     button: "Open Document",
   },
   {
     src: "/Icon/Use_Cases.png",
     title: "Use Cases",
     description: "Real-world applications across industries.",
-    pdf: "/doc/use_cases.pdf",
+    pdf: "/doc/Use_Cases.pdf",
     button: "Open Document",
   },
 ];
@@ -81,7 +81,7 @@ const DocsContent = () => {
               </p>
             </div>
             <button
-              className="bg-[#154E35] text-white px-[26px] py-3.5 rounded-md hover:bg-green-800 transition"
+              className="cursor-pointer bg-[#154E35] text-white px-[26px] py-3.5 rounded-md hover:bg-green-800 transition"
               onClick={() => window.open(doc.pdf, "_blank")}
             >
               {doc.button}
