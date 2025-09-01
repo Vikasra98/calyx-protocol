@@ -76,12 +76,12 @@ const FoundingStory = () => {
               },
             }}
           >
-            Calyx was founded to solve a simple but critical problem:
-            sustainability and governance data was everywhere, but trust in it
-            was nowhere. After years of building financial and compliance
-            infrastructure in emerging markets, our founder saw how ESG
-            reporting was held back by subjective ratings, closed systems, and
-            signals that faded over time.
+            Calyx Protocol was founded by Marco Guirola to solve a simple but
+            critical problem: sustainability and governance data was everywhere,
+            but trust in it was nowhere. After years of building financial and
+            compliance infrastructure in emerging markets, our founder saw how
+            ESG reporting was held back by subjective ratings, closed systems,
+            and signals that faded over time.
           </motion.p>
 
           <motion.p

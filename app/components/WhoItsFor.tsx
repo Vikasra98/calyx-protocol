@@ -118,8 +118,8 @@ const WhoItsFor = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            href="#"
-            className="mt-[30px] inline-block bg-white text-xl text-[#12291e] font-semibold px-6 py-3 rounded-md shadow-md transition-colors duration-300 w-fit"
+            href="/joinUs"
+            className="mt-[30px] inline-block bg-white text-xl text-[#12291e] font-semibold px-6 py-3 rounded-md shadow-md transition-colors duration-300 w-fit cursor-pointer"
           >
             Join the Verification Council →
           </motion.a>
