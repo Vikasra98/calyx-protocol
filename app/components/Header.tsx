@@ -31,7 +31,7 @@ const Header: React.FC = () => {
     { name: "About", href: "/aboutUs" },
     { name: "Scoring", href: "/scoring" },
     { name: "Docs", href: "/docs" },
-    { name: "Join", href: "/joinUs" },
+    { name: "Join", href: "https://esg-dashboard-six.vercel.app/login" },
   ];
 
   return (
